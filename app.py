@@ -81,7 +81,6 @@ if uploaded_file is not None:
 
     with col1:
         st.header("🖼️ Original Image")
-        # Corrected parameter: use_container_width
         st.image(original_image, caption="Original", use_container_width=True)
 
     with col2:
@@ -101,7 +100,6 @@ if uploaded_file is not None:
             end_time = time.time()
             processing_time = round(end_time - start_time, 2)
             
-            # Corrected parameter: use_container_width
             st.image(display_img, caption=f"Segmented with k={k}", use_container_width=True)
             st.write(f"⏱️ **Processing Time:** {processing_time} seconds")
 
